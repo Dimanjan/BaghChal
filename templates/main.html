@@ -1,0 +1,32 @@
+ {% load staticfiles %} {% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8"></meta>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+    <meta http-equiv="X-UA-Comapatible" content="ie=edge"></meta>
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <title>Bagh Chal</title>
+</head>
+
+<body>
+    <div id="imgPreload" style="display: none;"></div>
+    <style>
+        .board {
+            background-image: url("static/img/board.svg");
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    </style>
+    <div class="board" id="board">
+    </div>
+    <div class="winning-message" id="winningMessage">
+        <div id="message" data-winning-message-text></div>
+        <button id="restartButton">Restart</button>
+    </div>
+
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+
+</html>
